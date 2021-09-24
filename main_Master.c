@@ -18,7 +18,7 @@
 #define YELLOW_ALARM_DEVICE_2 RA7
 #define NUMBER_OF_DEVICES (3)
 
-
+#define _XTAL_FREQ 4000000
 
 void UART_Tx_Initialize(void){
     TXSTAbits.BRGH = 1;  // Set for high speed boud rate

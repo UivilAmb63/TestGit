@@ -1,0 +1,183 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"1150 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\PIC16F628.h
+[s S45 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S45 . TX9D TRMT BRGH . SYNC TXEN TX9 CSRC ]
+"1149
+[u S44 `S45 1 ]
+[n S44 . . ]
+"1161
+[v _TXSTAbits `VS44 ~T0 @X0 0 e@152 ]
+"1201
+[v _SPBRG `Vuc ~T0 @X0 0 e@153 ]
+"688
+[s S26 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S26 . RX9D OERR FERR ADEN CREN SREN RX9 SPEN ]
+"698
+[s S27 :3 `uc 1 :1 `uc 1 ]
+[n S27 . . ADDEN ]
+"687
+[u S25 `S26 1 `S27 1 ]
+[n S25 . . . ]
+"703
+[v _RCSTAbits `VS25 ~T0 @X0 0 e@24 ]
+"975
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"974
+[u S36 `S37 1 ]
+[n S36 . . ]
+"986
+[v _TRISBbits `VS36 ~T0 @X0 0 e@134 ]
+[p mainexit ]
+"907
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\PIC16F628.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"230
+[; <" PORTB equ 06h ;# ">
+"292
+[; <" PCLATH equ 0Ah ;# ">
+"312
+[; <" INTCON equ 0Bh ;# ">
+"390
+[; <" PIR1 equ 0Ch ;# ">
+"447
+[; <" TMR1 equ 0Eh ;# ">
+"454
+[; <" TMR1L equ 0Eh ;# ">
+"461
+[; <" TMR1H equ 0Fh ;# ">
+"468
+[; <" T1CON equ 010h ;# ">
+"527
+[; <" TMR2 equ 011h ;# ">
+"534
+[; <" T2CON equ 012h ;# ">
+"605
+[; <" CCPR1 equ 015h ;# ">
+"612
+[; <" CCPR1L equ 015h ;# ">
+"619
+[; <" CCPR1H equ 016h ;# ">
+"626
+[; <" CCP1CON equ 017h ;# ">
+"684
+[; <" RCSTA equ 018h ;# ">
+"755
+[; <" TXREG equ 019h ;# ">
+"762
+[; <" RCREG equ 01Ah ;# ">
+"769
+[; <" CMCON equ 01Fh ;# ">
+"839
+[; <" OPTION_REG equ 081h ;# ">
+"909
+[; <" TRISA equ 085h ;# ">
+"971
+[; <" TRISB equ 086h ;# ">
+"1033
+[; <" PIE1 equ 08Ch ;# ">
+"1090
+[; <" PCON equ 08Eh ;# ">
+"1139
+[; <" PR2 equ 092h ;# ">
+"1146
+[; <" TXSTA equ 098h ;# ">
+"1203
+[; <" SPBRG equ 099h ;# ">
+"1210
+[; <" EEDATA equ 09Ah ;# ">
+"1217
+[; <" EEADR equ 09Bh ;# ">
+"1224
+[; <" EECON1 equ 09Ch ;# ">
+"1262
+[; <" EECON2 equ 09Dh ;# ">
+"1269
+[; <" VRCON equ 09Fh ;# ">
+"7 ./Config.h
+[p x FOSC  =  INTOSCIO   ]
+"8
+[p x WDTE  =  OFF        ]
+"9
+[p x PWRTE  =  ON        ]
+"10
+[p x MCLRE  =  OFF       ]
+"11
+[p x BOREN  =  OFF       ]
+"12
+[p x LVP  =  OFF         ]
+"13
+[p x CPD  =  OFF         ]
+"14
+[p x CP  =  OFF          ]
+"23 main_Master.c
+[; ;main_Master.c: 23: void UART_Tx_Initialize(void){
+[v _UART_Tx_Initialize `(v ~T0 @X0 1 ef ]
+{
+[e :U _UART_Tx_Initialize ]
+[f ]
+"24
+[; ;main_Master.c: 24:     TXSTAbits.BRGH = 1;
+[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+"25
+[; ;main_Master.c: 25:     SPBRG = 25;
+[e = _SPBRG -> -> 25 `i `uc ]
+"27
+[; ;main_Master.c: 27:     TXSTAbits.SYNC = 1;
+[e = . . _TXSTAbits 0 4 -> -> 1 `i `uc ]
+"28
+[; ;main_Master.c: 28:     RCSTAbits.SPEN = 1;
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+"30
+[; ;main_Master.c: 30:     TRISBbits.TRISB2 = 0;
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+"31
+[; ;main_Master.c: 31:     TRISBbits.TRISB1 = 1;
+[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
+"32
+[; ;main_Master.c: 32: }
+[e :UE 52 ]
+}
+"34
+[; ;main_Master.c: 34: int numberOfReadChars = 0;
+[v _numberOfReadChars `i ~T0 @X0 1 e ]
+[i _numberOfReadChars
+-> 0 `i
+]
+"35
+[; ;main_Master.c: 35: int tryingToDetectCommunicationError = 0;
+[v _tryingToDetectCommunicationError `i ~T0 @X0 1 e ]
+[i _tryingToDetectCommunicationError
+-> 0 `i
+]
+"36
+[; ;main_Master.c: 36: int numberOfCommunicationsErrorsDetected = 0;
+[v _numberOfCommunicationsErrorsDetected `i ~T0 @X0 1 e ]
+[i _numberOfCommunicationsErrorsDetected
+-> 0 `i
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"48
+[; ;main_Master.c: 48: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"49
+[; ;main_Master.c: 49:     TRISA = 0x00;
+[e = _TRISA -> -> 0 `i `uc ]
+"50
+[; ;main_Master.c: 50: }
+[e :UE 53 ]
+}
